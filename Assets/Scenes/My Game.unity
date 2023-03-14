@@ -580,6 +580,9 @@ MonoBehaviour:
   - {fileID: 3387489835339284850, guid: 8ae073658a3c349c0a1c41bd07349408, type: 3}
   - {fileID: 190300074989040676, guid: 41108a8c91cd94dd59a5cf365d03538d, type: 3}
   - {fileID: 1077604731986940659, guid: 9d4d0442f7ac44385a4cf750a66957b8, type: 3}
+  obstaclePrefabs:
+  - {fileID: 4756115011835579657, guid: eca704b5b0e8545d5bc6de4cdb70e90f, type: 3}
+  - {fileID: 343890310064730030, guid: d8ae702e7ea014aedb57f3ac16112fb1, type: 3}
 --- !u!1001 &190300074129465085
 PrefabInstance:
   m_ObjectHideFlags: 0
