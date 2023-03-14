@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] peoplePrefabs;
+    public GameObject[] obstaclePrefabs;
     private float spawnRangeX = 10;
     private float spawnPosZ = 20;
     private float startDelay = 2;
@@ -14,6 +15,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnRandomPeople", startDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomObstacles", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -29,4 +31,13 @@ public class SpawnManager : MonoBehaviour
         
         Instantiate(peoplePrefabs[peopleIndex], spawnPos, peoplePrefabs[peopleIndex].transform.rotation);
     }
+
+    void SpawnRandomObstacles()
+    {
+        int obstacleIndex = Random.Range(0, obstaclePrefabs.Length);
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        
+        Instantiate(obstaclePrefabs[obstacleIndex], spawnPos, obstaclePrefabs[obstacleIndex].transform.rotation);
+    }
 }
+
