@@ -13,12 +13,17 @@ public class DetectCollisions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Game Over!");
+        }
+
         Destroy(gameObject);
-        Destroy(other.gameObject);
+        //Destroy(other.gameObject);
     }
 }
