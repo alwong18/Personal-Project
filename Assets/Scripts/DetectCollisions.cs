@@ -21,5 +21,4 @@ public class DetectCollisions : MonoBehaviour
         Destroy(gameObject);
         Debug.Log("Game Over!");
     }
-
 }
