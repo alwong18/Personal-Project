@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Restrictions of player
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
             verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * -verticalInput * Time.deltaTime * speed);
 
+        //lauching projectile
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
